@@ -1,0 +1,9 @@
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.visdx
+*.DS_Store
+*.vscode/
+
