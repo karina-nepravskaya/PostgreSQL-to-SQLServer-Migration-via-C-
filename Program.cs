@@ -1,5 +1,4 @@
-﻿using System;
-using Npgsql;
+﻿using Npgsql;
 using Microsoft.Data.SqlClient;
 
 namespace MyApp
@@ -8,8 +7,8 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            string pgConnStr = "Host=localhost;Port=5432;Database=dvdrental;Username=postgres;Password=Enigma23032007%;";
-            string sqlConnStr = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=True;";
+            string pgConnStr = "Host=localhost;Port=5432;Database=YourDBName;Username=YourUN;Password=YourPass;";
+            string sqlConnStr = "Server=localhost\\SQLEXPRESS;Database=YourDBName;Trusted_Connection=True;TrustServerCertificate=True;";
 
             using var pgConn = new NpgsqlConnection(pgConnStr);
             pgConn.Open();
