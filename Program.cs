@@ -13,7 +13,7 @@ namespace MyApp
             using var pgConn = new NpgsqlConnection(pgConnStr);
             pgConn.Open();
 
-            using var pgCmd = new NpgsqlCommand("SELECT first_name, last_name FROM public.actor WHERE actor_id NOT IN (1,3)", pgConn);
+            using var pgCmd = new NpgsqlCommand("SELECT first_name, last_name FROM public.actor", pgConn);
             using var reader = pgCmd.ExecuteReader();
 
             using var sqlConn = new SqlConnection(sqlConnStr);
